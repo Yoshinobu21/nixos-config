@@ -1,0 +1,8 @@
+{
+  "workspace": {
+    "library": ["/home/yoshinobu/.config/hypr"]
+  },
+  "diagnostics": {
+    "globals": ["hl"]
+  }
+}

@@ -1,0 +1,9 @@
+Starting SwayNotificationCenter version swaync 0.12.6
+** Message: 18:51:42.804: configModel.vala:513: Loading Config: "/etc/profiles/per-user/yoshinobu/etc/xdg/swaync/config.json"
+** Message: 18:51:42.984: functions.vala:104: Loading CSS: "/etc/profiles/per-user/yoshinobu/etc/xdg/swaync/style.css"
+** Message: 18:51:42.986: functions.vala:117: Loading CSS: "/etc/profiles/per-user/yoshinobu/etc/xdg/swaync/style.css"
+** Message: 18:51:42.994: factory.vala:55: Loading widget: inhibitors
+** Message: 18:51:42.994: factory.vala:55: Loading widget: title
+** Message: 18:51:42.994: factory.vala:55: Loading widget: dnd
+** Message: 18:51:42.994: factory.vala:17: Loading widget: widget-notifications
+Gdk-Message: 18:53:19.143: Lost connection to Wayland compositor.

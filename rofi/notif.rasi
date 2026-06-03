@@ -1,0 +1,89 @@
+@theme "/dev/null"
+
+/*****----- Global Properties -----*****/
+@import "./colors.rasi"
+@import "./fonts.rasi"
+
+* {
+    /* Derived text colors for contrast not in colors.rasi */
+    fg-alt:          #787c99; 
+    selected-text:   #11121d; 
+
+    background-color: transparent;
+    text-color: @foreground;
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+    border: 0;
+}
+
+window {
+    width: 400px;
+    location: northeast;
+    anchor: northeast;
+    x-offset: -20px;
+    y-offset: 60px;
+    
+    background-color: @background;
+    border: 2px;
+    border-color: #ffffff30;
+    border-radius: 12px;
+}
+
+mainbox {
+    padding: 20px;
+    children: [inputbar, listview];
+}
+
+/* --- HEADER / SEARCH --- */
+inputbar {
+    padding: 0 0 20px 0;
+    children: [prompt, entry];
+} 
+
+prompt {
+    text-color: @selected;
+    padding: 0 10px 0 0;
+}
+
+entry {
+    text-color: @foreground;
+    placeholder: "Search...";
+    placeholder-color: @fg-alt;
+}
+
+/* --- NOTIFICATION CARDS --- */
+listview {
+    columns: 1;
+    lines: 5;
+    spacing: 15px; 
+    fixed-height: false;
+    scrollbar: false;
+}
+
+/* Default card style with transparent background and subtle border */
+element {
+    padding: 15px;
+    background-color: @background-alt;
+    border: 1px;
+    border-color: rgba(255, 255, 255, 0.15); /* Defines the card shape */
+    border-radius: 8px;
+}
+
+element normal.normal, element alternate.normal {
+    background-color: @background-alt;
+    text-color: @foreground;
+}
+
+/* The cyan highlighted card */
+element selected.normal {
+    background-color: @selected;
+    text-color: @selected-text;
+    border-color: @selected;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+}
