@@ -12,7 +12,11 @@
 
   # Recursively map your app folders into ~/.config/
   xdg.configFile = {
-    "hypr".source = ./hypr;
+  "hypr" = {
+    source = ./hypr;
+    recursive = true;
+    force = true; # Force overwrite if it exists
+  };
     "foot".source = ./foot;
     "waybar".source = ./waybar;
     "rofi".source = ./rofi;
