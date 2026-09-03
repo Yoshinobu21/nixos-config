@@ -1,10 +1,10 @@
 { ... }:
 
 {
-  # Ensure media directories exist with appropriate permissions
+  # Ensure media and share directories exist with appropriate permissions
   systemd.tmpfiles.rules = [
-    "d /media/myFiles 0775 yoshinobu users -"
-    "d /media/oneDriveIsis 0775 yoshinobu users -"
+    "d /mnt/ssd/myFiles 0775 yoshinobu users -"
+    "d /mnt/ssd/oneDriveIsis 0775 yoshinobu users -"
   ];
 
   services.samba = {
@@ -22,7 +22,7 @@
         "map to guest" = "bad user";
       };
       "myFiles" = {
-        "path" = "/media/myFiles";
+        "path" = "/mnt/ssd/myFiles";
         "browseable" = "yes";
         "writable" = "yes";
         "read only" = "no";
@@ -31,7 +31,7 @@
         "directory mask" = "0775";
       };
       "oneDriveIsis" = {
-        "path" = "/media/oneDriveIsis";
+        "path" = "/mnt/ssd/oneDriveIsis";
         "browseable" = "yes";
         "writable" = "yes";
         "read only" = "no";

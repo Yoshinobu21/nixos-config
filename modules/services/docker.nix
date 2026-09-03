@@ -11,6 +11,9 @@
     };
   };
 
+  # Declarative OCI containers management via systemd
+  virtualisation.oci-containers.backend = "docker";
+
   environment.systemPackages = with pkgs; [
     docker-compose
   ];
