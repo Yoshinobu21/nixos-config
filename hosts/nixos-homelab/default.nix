@@ -27,9 +27,9 @@
   powerManagement.cpuFreqGovernor = lib.mkDefault "schedutil";
 
   # 4. Keep running with lid closed (headless server mode)
-  services.logind = {
-    lidSwitch = "ignore";
-    lidSwitchDocked = "ignore";
-    lidSwitchExternalPower = "ignore";
+  services.logind.settings.Login = {
+    HandleLidSwitch = "ignore";
+    HandleLidSwitchDocked = "ignore";
+    HandleLidSwitchExternalPower = "ignore";
   };
 }
