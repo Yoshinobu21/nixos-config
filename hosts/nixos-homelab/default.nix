@@ -25,4 +25,11 @@
 
   # 3. CPU Frequency Governor (Cool, quiet, energy-efficient 24/7 homelab operation)
   powerManagement.cpuFreqGovernor = lib.mkDefault "schedutil";
+
+  # 4. Keep running with lid closed (headless server mode)
+  services.logind = {
+    lidSwitch = "ignore";
+    lidSwitchDocked = "ignore";
+    lidSwitchExternalPower = "ignore";
+  };
 }
